@@ -1,6 +1,7 @@
 package com.polytech.tp;
 
 public class Cours implements ICours {
+
     private String matiere;
     private String enseignant;
     private String salle;
@@ -11,7 +12,9 @@ public class Cours implements ICours {
     private boolean necessiteProjecteur;
 
     
-    public Cours(String matiere, String enseignant, String salle, String date, 
+    public Cours() {}
+
+    public Cours(String matiere, String enseignant, String salle, String date,
                  String heureDebut, boolean estOptionnel, String niveau, boolean necessiteProjecteur) {
         this.matiere = matiere;
         this.enseignant = enseignant;
@@ -25,15 +28,15 @@ public class Cours implements ICours {
 
     @Override
     public String getDescription() {
-        return "Cours de " + matiere + " avec " + enseignant + " (" + salle + ")";
+       
+        return matiere;
     }
 
     @Override
     public double getDuree() {
-        return 1.5; 
+        return 1.5;
     }
-    
-    
+
     public String getMatiere() { return matiere; }
     public String getEnseignant() { return enseignant; }
 }

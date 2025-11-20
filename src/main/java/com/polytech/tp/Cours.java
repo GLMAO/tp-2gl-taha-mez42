@@ -11,7 +11,7 @@ public class Cours implements ICours {
     private String niveau;
     private boolean necessiteProjecteur;
 
-    
+
     public Cours() {}
 
     public Cours(String matiere, String enseignant, String salle, String date,
@@ -28,8 +28,7 @@ public class Cours implements ICours {
 
     @Override
     public String getDescription() {
-       
-        return matiere;
+        return "Cours: " + matiere + " avec " + enseignant; // Corrigé pour inclure l'enseignant
     }
 
     @Override
@@ -37,6 +36,23 @@ public class Cours implements ICours {
         return 1.5;
     }
 
+    // Getters
     public String getMatiere() { return matiere; }
     public String getEnseignant() { return enseignant; }
+    public String getSalle() { return salle; }
+    public String getDate() { return date; }
+    public String getHeureDebut() { return heureDebut; }
+    public boolean isEstOptionnel() { return estOptionnel; }
+    public String getNiveau() { return niveau; }
+    public boolean isNecessiteProjecteur() { return necessiteProjecteur; }
+
+    // Setters (nécessaires pour le Builder)
+    public void setMatiere(String matiere) { this.matiere = matiere; }
+    public void setEnseignant(String enseignant) { this.enseignant = enseignant; }
+    public void setSalle(String salle) { this.salle = salle; }
+    public void setDate(String date) { this.date = date; }
+    public void setHeureDebut(String heureDebut) { this.heureDebut = heureDebut; }
+    public void setEstOptionnel(boolean estOptionnel) { this.estOptionnel = estOptionnel; }
+    public void setNiveau(String niveau) { this.niveau = niveau; }
+    public void setNecessiteProjecteur(boolean necessiteProjecteur) { this.necessiteProjecteur = necessiteProjecteur; }
 }

@@ -44,7 +44,6 @@ public class GestionnaireEmploiDuTemps implements Subject {
     }
 
     public void setChangement(String message) {
-        // TODO Auto-generated method stub
         notifyObservers(message);
     }
 }
